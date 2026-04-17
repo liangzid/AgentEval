@@ -22,30 +22,6 @@ The framework leverages Docker containers to ensure environment consistency and 
 - **Security-First Design**: API keys stored in local files, never hardcoded in source
 - **Extensible Architecture**: Add new agents by implementing the AgentCaller interface
 
-## Architecture
-
-```
-                    ┌─────────────────────────────────────────────┐
-                    │              AgentEval Python API            │
-                    │                                               │
-                    │  get_caller('nanobot')  get_caller('hermes') │
-                    └───────────────────┬─────────────────────────┘
-                                        │
-                    ┌───────────────────┴─────────────────────────┐
-                    │           AgentCaller Interface             │
-                    │                                               │
-                    │  call(task_input, model, timeout) -> Response │
-                    └───────────────────┬─────────────────────────┘
-                                        │
-        ┌───────────────────────────────┼───────────────────────────────┐
-        │                               │                               │
-        v                               v                               v
-┌───────────────┐              ┌───────────────┐              ┌───────────────┐
-│   Nanobot     │              │   Hermes      │              │   ZeroClaw   │
-│   Container   │              │   Container   │              │   Container   │
-└───────────────┘              └───────────────┘              └───────────────┘
-```
-
 ## Installation
 
 ### Prerequisites
@@ -356,7 +332,7 @@ If you use AgentEval in your research, please cite:
   title = {AgentEval: A Unified Framework for Evaluating LLM Coding Agents},
   author = {Zi Liang},
   year = {2026},
-  url = {https://github.com/your-org/agent-eval}
+  url = {https://github.com/liangzid/agent-eval}
 }
 ```
 
@@ -365,7 +341,7 @@ If you use AgentEval in your research, please cite:
 For questions, issues, or collaboration inquiries:
 - Open an issue on GitHub
 - Submit a pull request
-- Email: your.email@example.com
+- Email: zi1415926.liang@connect.polyu.hk
 
 ---
 
